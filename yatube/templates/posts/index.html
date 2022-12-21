@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
-    <title>Последние обновления на сайте</title>
-    {% block content %}
-      <!-- класс py-5 создает отступы сверху и снизу блока -->
-      <div class="container py-5">
-      </div>
+<title>Последние обновления на сайте</title>
+  {% block content %}
+  <!-- класс py-5 создает отступы сверху и снизу блока -->
+  <div class="container py-5"></div>
 {% for post in posts %}
   <ul>
     <li>
@@ -17,4 +16,4 @@
   <a href="">все записи группы</a>
   {% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
-    {% endblock %}
+  {% endblock %}

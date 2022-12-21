@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-# Импортируем модель, чтобы обратиться к ней
-from .models import Post
+
+from .models import Post, Group
 
 
 def index(request):
@@ -19,14 +19,3 @@ def group_posts(request, slug):
         'posts': posts,
     }
     return render(request, 'posts/group_list.html', context)
-
-def group_list(request):
-    template = 'posts/group_list.html'
-    title = 'Yatube группы'
-    context = {
-        # В словарь можно передать переменную
-        'title': title,
-        # А можно сразу записать значение в словарь. Но обычно так не делают
-        'text': 'Здесь будет информация о группах проекта Yatube',
-    }
-    return render(request, template, context)
